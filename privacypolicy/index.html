@@ -1,325 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy for QuickList</title>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - QuickList</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc2fc',
+                            400: '#36a2fa',
+                            500: '#0c87eb',
+                            600: '#0069c7',
+                            700: '#0154a3',
+                            800: '#064886',
+                            900: '#0b3c6f',
+                        },
+                        dark: '#0f172a',
+                    },
+                    boxShadow: {
+                        'card': '0 10px 40px -10px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 20px;
-        background-color: #f4f4f4;
-        color: #333;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      header {
-        text-align: center;
-        padding: 20px 0;
-        border-bottom: 1px solid #ddd;
-      }
-      h1,
-      h2 {
-        color: #222;
-      }
-      h1 {
-        margin-bottom: 5px;
-      }
-      .last-updated {
-        font-style: italic;
-        color: #666;
-        margin-top: 0;
-      }
-      section {
-        margin-bottom: 30px;
-      }
-      ul {
-        list-style-type: disc;
-        padding-left: 20px;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-      }
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
-      th {
-        background-color: #f2f2f2;
-      }
-      .key-points {
-        list-style-type: none;
-        padding-left: 0;
-      }
-      .key-points li {
-        margin-bottom: 10px;
-      }
-      a {
-        color: #007bff;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      #back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #007bff;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        display: none;
-        cursor: pointer;
-      }
-      nav {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: -20px -20px 20px -20px;
-        width: calc(100% + 40px);
-      }
-      .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-      }
-      .logo span {
-        color: #ffd700;
-      }
-      .back-link {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        padding: 8px 16px;
-        border: 2px solid white;
-        border-radius: 25px;
-        transition: all 0.3s;
-      }
-      .back-link:hover {
-        background: white;
-        color: #667eea;
-        text-decoration: none;
-      }
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: #0c87eb;
+            border-radius: 4px;
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h4 {
+            font-weight: 600;
+            color: #334155;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: '•';
+            color: #0c87eb;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        a {
+            color: #0c87eb;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #0069c7;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+            color: #0f172a;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .section-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f1f5f9;
+            margin-bottom: 2rem;
+        }
     </style>
-  </head>
-  <body>
-    <nav>
-      <a href="/" class="logo">Quick<span>List</span></a>
-      <a href="/" class="back-link">← Back to Home</a>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 bg-gradient-to-tr from-primary-500 to-indigo-500 rounded-xl flex items-center justify-center text-white shadow-lg transition-transform group-hover:scale-105">
+                        <i class="fa-solid fa-check text-xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-2xl tracking-tight text-dark">QuickList</span>
+                </a>
+
+                <a href="../index.html" class="text-sm font-semibold text-slate-600 hover:text-primary-600 transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Home
+                </a>
+            </div>
+        </div>
     </nav>
-    <header>
-      <h1>Privacy Policy for QuickList</h1>
-      <p class="last-updated">Last Updated: December 9, 2025</p>
+
+    <!-- Header -->
+    <header class="pt-32 pb-12 px-6 text-center">
+        <h1 class="font-display font-extrabold text-4xl md:text-5xl text-slate-900 mb-4">Privacy Policy</h1>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-500 text-sm shadow-sm">
+            <i class="fa-regular fa-calendar"></i>
+            <span>Last Updated: December 20, 2025</span>
+        </div>
     </header>
 
-    <section id="introduction">
-      <h2>Introduction</h2>
-      <p>
-        Welcome to QuickList ("I", "me", or "my"). This Privacy Policy explains
-        how the QuickList mobile application (the "App") handles your
-        information.
-      </p>
-      <p>
-        QuickList is designed to function
-        <strong
-          >without collecting, storing, or processing any personal data</strong
-        >
-        from users.
-      </p>
-    </section>
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        
+        <div class="section-card">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to QuickList ("I", "me", or "my"). This Privacy Policy explains
+                how the QuickList mobile application (the "App") handles your information.
+            </p>
+            <p class="text-lg font-medium text-slate-800 bg-blue-50 p-4 rounded-xl border border-blue-100">
+                QuickList is designed to function 
+                <span class="text-primary-600">without collecting, storing, or processing any personal data</span> 
+                from users.
+            </p>
+        </div>
 
-    <section id="information-we-collect">
-      <h2>Information I Collect</h2>
-      <p>
-        <strong
-          >I do not collect, store, or process any personal information from
-          users.</strong
-        >
-        All tasks, notes, and settings you create remain
-        <strong>on your device only</strong>
-        and are never transmitted to any server.
-      </p>
+        <div class="section-card">
+            <h2>Information I Collect</h2>
+            <p>
+                <strong>I do not collect, store, or process any personal information from users.</strong>
+                All tasks, notes, and settings you create remain <strong>on your device only</strong> and are never transmitted to any server.
+            </p>
 
-      <h3>Third-Party Services</h3>
-      <h4>Google AdMob</h4>
-      <p>
-        QuickList uses Google AdMob to display ads. While I do not collect any
-        data, Google AdMob may collect device-related information for
-        advertising purposes. This data is processed directly by Google and not
-        by me.
-      </p>
-      <ul>
-        <li>Advertising ID</li>
-        <li>Approximate location (non-precise)</li>
-        <li>Device information needed to serve ads</li>
-        <li>Ad interaction data</li>
-      </ul>
-      <p>
-        You can learn more at:
-        <a href="https://policies.google.com/privacy" target="_blank">
-          Google Privacy Policy
-        </a>
-      </p>
-    </section>
+            <h3>Third-Party Services</h3>
+            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 mt-4">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fa-brands fa-google text-slate-500 text-xl"></i>
+                    <h4 class="m-0 text-slate-700">Google AdMob</h4>
+                </div>
+                <p class="text-sm text-slate-600 mb-0">
+                    QuickList uses Google AdMob to display ads. While I do not collect any data, Google AdMob may collect device-related information for advertising purposes. This data is processed directly by Google and not by me.
+                </p>
+                <ul class="mt-4 text-sm text-slate-600">
+                    <li>Advertising ID</li>
+                    <li>Approximate location (non-precise)</li>
+                    <li>Device information needed to serve ads</li>
+                    <li>Ad interaction data</li>
+                </ul>
+                <a href="https://policies.google.com/privacy" target="_blank" class="text-xs font-semibold mt-2 inline-block">
+                    Read Google Privacy Policy <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                </a>
+            </div>
+        </div>
 
-    <section id="how-we-use-your-information">
-      <h2>How I Use Your Information</h2>
-      <p>
-        Since I do not collect any personal data, no user information is stored
-        or used by the App.
-      </p>
-      <p>
-        The only data processed is handled by Google AdMob for displaying ads.
-      </p>
-    </section>
+        <div class="section-card">
+            <h2>How I Use Your Information</h2>
+            <p>
+                Since I do not collect any personal data, no user information is stored or used by the App.
+                The only data processed is handled by Google AdMob for displaying ads.
+            </p>
+        </div>
 
-    <section id="data-storage">
-      <h2>Data Storage</h2>
-      <p>
-        Your task lists, notes, and preferences are stored
-        <strong>locally on your device only</strong>. I do not upload or store
-        any information on external servers.
-      </p>
-      <p>
-        AdMob data, if collected, is stored and processed by Google according to
-        their policy.
-      </p>
-    </section>
+        <div class="section-card">
+            <h2>Data Storage</h2>
+            <p>
+                Your task lists, notes, and preferences are stored <strong>locally on your device only</strong>. I do not upload or store any information on external servers.
+            </p>
+            <p>
+                AdMob data, if collected, is stored and processed by Google according to their policy.
+            </p>
+        </div>
 
-    <section id="data-sharing">
-      <h2>Data Sharing</h2>
-      <p>
-        I do not share, sell, or transfer any personal information because none
-        is collected.
-      </p>
-      <p>
-        The only third party involved is Google AdMob, which may process limited
-        device information for ad delivery.
-      </p>
-    </section>
+        <div class="section-card">
+            <h2>Data Sharing</h2>
+            <p>
+                I do not share, sell, or transfer any personal information because none is collected. 
+                The only third party involved is Google AdMob, which may process limited device information for ad delivery.
+            </p>
+        </div>
 
-    <section id="your-rights-and-choices">
-      <h2>Your Rights and Choices</h2>
-      <p>Since no personal data is collected by the App:</p>
-      <ul>
-        <li>There is no personal data to access, change, or delete</li>
-        <li>Uninstalling the App removes all locally stored task data</li>
-      </ul>
+        <div class="section-card">
+            <h2>Your Rights and Choices</h2>
+            <p>Since no personal data is collected by the App:</p>
+            <ul>
+                <li>There is no personal data to access, change, or delete</li>
+                <li>Uninstalling the App removes all locally stored task data</li>
+            </ul>
 
-      <h3>Advertising Preferences</h3>
-      <ul>
-        <li>
-          You can opt out of personalized ads through your device settings
-        </li>
-        <li>You can reset your advertising ID at any time</li>
-      </ul>
-    </section>
+            <h3>Advertising Preferences</h3>
+            <ul>
+                <li>You can opt out of personalized ads through your device settings</li>
+                <li>You can reset your advertising ID at any time</li>
+            </ul>
+        </div>
 
-    <section id="childrens-privacy">
-      <h2>Children's Privacy</h2>
-      <p>
-        The App does not knowingly collect personal information from anyone,
-        including children under 13.
-      </p>
-    </section>
+        <div class="section-card">
+            <h2>Children's Privacy</h2>
+            <p>
+                The App does not knowingly collect personal information from anyone,
+                including children under 13.
+            </p>
+        </div>
 
-    <section id="security">
-      <h2>Security</h2>
-      <p>
-        Since no data is collected on external servers, your privacy is
-        protected by design. All data is stored only on your device.
-      </p>
-    </section>
+        <div class="section-card">
+            <h2>Security</h2>
+            <p>
+                Since no data is collected on external servers, your privacy is
+                protected by design. All data is stored only on your device.
+            </p>
+        </div>
 
-    <section id="changes-to-this-privacy-policy">
-      <h2>Changes to This Privacy Policy</h2>
-      <p>
-        I may update this Privacy Policy from time to time. Continued use of the
-        App means you accept the updated policy.
-      </p>
-    </section>
+        <div class="section-card">
+            <h2>Summary</h2>
+            <div class="overflow-x-auto">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Collected</th>
+                        <th>Stored</th>
+                        <th>Shared</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Tasks & Notes</td>
+                        <td>No</td>
+                        <td>Locally on device</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Preferences</td>
+                        <td>No</td>
+                        <td>Locally on device</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Device Info</td>
+                        <td>No (AdMob Only)</td>
+                        <td>Not stored by me</td>
+                        <td>Google</td>
+                    </tr>
+                    <tr>
+                        <td>Ad Interaction</td>
+                        <td>No (AdMob Only)</td>
+                        <td>Not stored by me</td>
+                        <td>Google</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
 
-    <section id="contact-us">
-      <h2>Contact Us</h2>
-      <p>If you have any questions, contact me at:</p>
-      <p><strong>Email:</strong> rimaolidev@gmail.com</p>
-      <p><strong>Developer:</strong> RimaOLi</p>
-    </section>
+            <h3>Key Points</h3>
+            <div class="grid sm:grid-cols-2 gap-4 mt-4">
+                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg text-green-700 text-sm font-medium">
+                    <i class="fa-solid fa-check-circle"></i> No personal data collected
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg text-green-700 text-sm font-medium">
+                    <i class="fa-solid fa-check-circle"></i> No account required
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg text-green-700 text-sm font-medium">
+                    <i class="fa-solid fa-check-circle"></i> Data stays on device
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg text-green-700 text-sm font-medium">
+                    <i class="fa-solid fa-check-circle"></i> Uninstall clears data
+                </div>
+            </div>
+        </div>
 
-    <section id="summary">
-      <h2>Summary</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Data Type</th>
-            <th>Collected</th>
-            <th>Stored</th>
-            <th>Shared</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Tasks & Notes</td>
-            <td>No</td>
-            <td>Locally on device</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Preferences</td>
-            <td>No</td>
-            <td>Locally on device</td>
-            <td>No</td>
-          </tr>
-          <tr>
-            <td>Device Info</td>
-            <td>No (Only Google AdMob collects)</td>
-            <td>Not stored by me</td>
-            <td>Handled by Google</td>
-          </tr>
-          <tr>
-            <td>Ad Interaction</td>
-            <td>No (Only Google AdMob collects)</td>
-            <td>Not stored by me</td>
-            <td>Handled by Google</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="section-card">
+            <h2>Contact Us</h2>
+            <div class="flex flex-col sm:flex-row gap-6 mt-4">
+               <div>
+                    <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">Developer</h4>
+                    <p class="font-display font-semibold text-slate-800 text-lg">RimaOLi</p>
+               </div>
+               <div>
+                    <h4 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">Email</h4>
+                    <a href="mailto:rimaolidev@gmail.com" class="font-display font-semibold text-primary-600 text-lg no-underline hover:underline">rimaolidev@gmail.com</a>
+               </div>
+            </div>
+        </div>
 
-      <h3>Key Points:</h3>
-      <ul class="key-points">
-        <li>✅ No personal data collected</li>
-        <li>✅ No account required</li>
-        <li>✅ All data stays on your device</li>
-        <li>✅ Google AdMob may collect limited data for ads</li>
-        <li>✅ Uninstalling removes all local data</li>
-      </ul>
-    </section>
+    </main>
 
-    <div id="back-to-top">Back to Top</div>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-500 text-sm">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <span class="font-display font-bold text-lg text-slate-700">QuickList</span>
+            </div>
+            
+            <p class="text-slate-400 text-sm">
+                © 2025 QuickList App. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
-    <script>
-      // Minimal JS for back-to-top button
-      const backToTop = document.getElementById("back-to-top");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          backToTop.style.display = "block";
-        } else {
-          backToTop.style.display = "none";
-        }
-      });
-      backToTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    </script>
-  </body>
+</body>
 </html>
